@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "ssdc-charts-mobile",
+    "slug": "ssdc-charts-mobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "ssdc-charts-mobile"
+}
