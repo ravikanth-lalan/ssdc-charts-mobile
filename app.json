@@ -3,9 +3,33 @@
     "name": "ssdc-charts-mobile",
     "slug": "ssdc-charts-mobile",
     "version": "1.0.0",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": {
+      "bundleIdentifier": "com.example.ssdcchartsmobile",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.example.ssdcchartsmobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
   },
   "name": "ssdc-charts-mobile"
 }
