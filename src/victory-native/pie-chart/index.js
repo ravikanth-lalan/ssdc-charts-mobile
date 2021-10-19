@@ -15,6 +15,8 @@ const VictoryNativePie = props => {
     radius,
     theme = VictoryTheme.material,
     width,
+    x,
+    y,
   } = props;
 
   return (
@@ -28,6 +30,7 @@ const VictoryNativePie = props => {
       containerComponent={
         <VictoryVoronoiContainer fixLabelOverlap={true} responsive={true} />
       }
+      colorScale={data.map(datum => datum.color)}
       cornerRadius={4}
       data={data}
       fixLabelOverlap={true}
@@ -41,14 +44,14 @@ const VictoryNativePie = props => {
       // sortOrder="descending"
       theme={theme}
       width={width}
-      x="label"
-      y="value"
+      x={x}
+      y={y}
     />
   );
 };
 
 const VictoryNativePieChart = props => {
-  const { innerRadius = 0, radius = 160 } = props;
+  const { innerRadius = 0, radius = 100, x = 'label', y = 'value' } = props;
 
   const dimensions = useWindowDimensions();
 
@@ -66,6 +69,8 @@ const VictoryNativePieChart = props => {
         innerRadius={innerRadius}
         radius={radius}
         width={dimensions.width}
+        x={x}
+        y={y}
       />
     </View>
   );

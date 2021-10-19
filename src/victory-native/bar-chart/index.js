@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { View, useWindowDimensions } from 'react-native';
 import {
   VictoryAxis,
@@ -45,6 +45,7 @@ const VictoryNativeBar = props => {
               }}
               key={id}
               data={data}
+              style={{ data: { fill: color } }}
               labels={({ datum }) => `${id}: ${datum.y}`}
               labelComponent={<VictoryTooltip renderInPortal={false} />}
             />
@@ -58,6 +59,56 @@ const VictoryNativeBar = props => {
 const VictoryNativeBarChart = props => {
   const dimensions = useWindowDimensions();
 
+  const data = useMemo(() => BarDataJSON, []);
+
+  const key = useMemo(() => 'country', []);
+
+  const keys = useMemo(
+    () => [
+      {
+        dataKey: 'hot dog',
+        fill: '#97e3d5',
+      },
+      {
+        dataKey: 'burger',
+        fill: '#61cdbb',
+      },
+      {
+        dataKey: 'sandwich',
+        fill: '#e8a838',
+      },
+      {
+        dataKey: 'kebab',
+        fill: '#f1e15b',
+      },
+      {
+        dataKey: 'fries',
+        fill: '#f47560',
+      },
+      {
+        dataKey: 'donut',
+        fill: '#e8c1a0',
+      },
+    ],
+    [],
+  );
+
+  const stackData = useMemo(
+    () =>
+      keys.map(
+        ({ dataKey, fill }) => ({
+          id: dataKey,
+          color: fill,
+          data: data.map(datum => ({
+            x: datum[key],
+            y: datum[dataKey],
+          })),
+        }),
+        [],
+      ),
+    [data, key, keys],
+  );
+
   return (
     <View
       style={{
@@ -66,7 +117,7 @@ const VictoryNativeBarChart = props => {
       }}>
       <VictoryNativeBar
         {...props}
-        stackData={BarDataJSON}
+        stackData={stackData}
         width={dimensions.width}
       />
     </View>

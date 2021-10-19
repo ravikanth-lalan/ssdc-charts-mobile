@@ -1,6 +1,7 @@
 import React from 'react';
 import { useWindowDimensions, View } from 'react-native';
 import {
+  VictoryAxis,
   VictoryChart,
   VictoryLine,
   VictoryStack,
@@ -14,6 +15,7 @@ const VictoryNativeLine = props => {
   const {
     height,
     stackData = [],
+    tickCountFactor = 1,
     theme = VictoryTheme.material,
     width,
   } = props;
@@ -28,6 +30,8 @@ const VictoryNativeLine = props => {
       height={height}
       theme={theme}
       width={width}>
+      <VictoryAxis tickCount={Math.round(width / 100 * tickCountFactor)} />
+      <VictoryAxis dependentAxis />
       <VictoryStack>
         {stackData.map(({ id, color, data }) => {
           return (

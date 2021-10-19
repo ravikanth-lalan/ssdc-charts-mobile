@@ -1,110 +1,110 @@
 [
   {
-    "id": "make",
-    "label": "make",
-    "value": 28,
-    "color": "hsl(161, 70%, 50%)"
-  },
-  {
-    "id": "sass",
-    "label": "sass",
-    "value": 234,
-    "color": "hsl(69, 70%, 50%)"
-  },
-  {
-    "id": "css",
-    "label": "css",
-    "value": 218,
-    "color": "hsl(69, 70%, 50%)"
+    "id": "javascript",
+    "label": "javascript",
+    "value": 376,
+    "color": "hsl(326, 70%, 50%)"
   },
   {
     "id": "java",
     "label": "java",
-    "value": 521,
-    "color": "hsl(126, 70%, 50%)"
+    "value": 248,
+    "color": "hsl(256, 70%, 50%)"
   },
   {
-    "id": "stylus",
-    "label": "stylus",
-    "value": 579,
-    "color": "hsl(177, 70%, 50%)"
+    "id": "css",
+    "label": "css",
+    "value": 330,
+    "color": "hsl(251, 70%, 50%)"
   },
   {
     "id": "hack",
     "label": "hack",
-    "value": 455,
-    "color": "hsl(133, 70%, 50%)"
-  },
-  {
-    "id": "javascript",
-    "label": "javascript",
-    "value": 290,
-    "color": "hsl(272, 70%, 50%)"
-  },
-  {
-    "id": "python",
-    "label": "python",
-    "value": 497,
-    "color": "hsl(55, 70%, 50%)"
-  },
-  {
-    "id": "haskell",
-    "label": "haskell",
-    "value": 528,
-    "color": "hsl(148, 70%, 50%)"
-  },
-  {
-    "id": "rust",
-    "label": "rust",
-    "value": 453,
-    "color": "hsl(248, 70%, 50%)"
-  },
-  {
-    "id": "go",
-    "label": "go",
-    "value": 561,
-    "color": "hsl(314, 70%, 50%)"
-  },
-  {
-    "id": "php",
-    "label": "php",
-    "value": 122,
-    "color": "hsl(27, 70%, 50%)"
-  },
-  {
-    "id": "c",
-    "label": "c",
-    "value": 361,
-    "color": "hsl(91, 70%, 50%)"
-  },
-  {
-    "id": "erlang",
-    "label": "erlang",
-    "value": 573,
-    "color": "hsl(219, 70%, 50%)"
+    "value": 214,
+    "color": "hsl(20, 70%, 50%)"
   },
   {
     "id": "scala",
     "label": "scala",
-    "value": 119,
-    "color": "hsl(293, 70%, 50%)"
+    "value": 423,
+    "color": "hsl(306, 70%, 50%)"
   },
   {
     "id": "lisp",
     "label": "lisp",
-    "value": 37,
-    "color": "hsl(300, 70%, 50%)"
+    "value": 72,
+    "color": "hsl(341, 70%, 50%)"
   },
   {
-    "id": "ruby",
-    "label": "ruby",
-    "value": 587,
-    "color": "hsl(165, 70%, 50%)"
+    "id": "haskell",
+    "label": "haskell",
+    "value": 238,
+    "color": "hsl(322, 70%, 50%)"
+  },
+  {
+    "id": "rust",
+    "label": "rust",
+    "value": 508,
+    "color": "hsl(154, 70%, 50%)"
+  },
+  {
+    "id": "go",
+    "label": "go",
+    "value": 593,
+    "color": "hsl(113, 70%, 50%)"
+  },
+  {
+    "id": "stylus",
+    "label": "stylus",
+    "value": 257,
+    "color": "hsl(151, 70%, 50%)"
+  },
+  {
+    "id": "php",
+    "label": "php",
+    "value": 358,
+    "color": "hsl(111, 70%, 50%)"
   },
   {
     "id": "elixir",
     "label": "elixir",
-    "value": 43,
-    "color": "hsl(13, 70%, 50%)"
+    "value": 302,
+    "color": "hsl(127, 70%, 50%)"
+  },
+  {
+    "id": "sass",
+    "label": "sass",
+    "value": 308,
+    "color": "hsl(289, 70%, 50%)"
+  },
+  {
+    "id": "ruby",
+    "label": "ruby",
+    "value": 397,
+    "color": "hsl(240, 70%, 50%)"
+  },
+  {
+    "id": "c",
+    "label": "c",
+    "value": 378,
+    "color": "hsl(43, 70%, 50%)"
+  },
+  {
+    "id": "python",
+    "label": "python",
+    "value": 271,
+    "color": "hsl(303, 70%, 50%)"
+  },
+  {
+    "id": "make",
+    "label": "make",
+    "value": 101,
+    "color": "hsl(310, 70%, 50%)"
+  },
+  {
+    "id": "erlang",
+    "label": "erlang",
+    "value": 270,
+    "color": "hsl(342, 70%, 50%)"
   }
 ]

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useWindowDimensions, View } from 'react-native';
 import {
   VictoryArea,
@@ -21,7 +21,9 @@ const VictoryNativeArea = props => {
 
   return (
     <VictoryChart
-      containerComponent={<VictoryVoronoiContainer fixLabelOverlap={true} responsive={true} />}
+      containerComponent={
+        <VictoryVoronoiContainer fixLabelOverlap={true} responsive={true} />
+      }
       domain={{}}
       domainPadding={0}
       fixLabelOverlap={true}
@@ -31,7 +33,7 @@ const VictoryNativeArea = props => {
       <VictoryAxis />
       <VictoryAxis dependentAxis />
       <VictoryStack>
-        {stackData.map(({ id, data }) => {
+        {stackData.map(({ id, color, data }) => {
           return (
             <VictoryArea
               key={id}
@@ -42,6 +44,7 @@ const VictoryNativeArea = props => {
                   duration: 0,
                 },
               }}
+              style={{ data: { fill: color } }}
               labels={({ datum }) => `${id}: ${datum.y}`}
               labelComponent={<VictoryTooltip renderInPortal={false} />}
               interpolation="natural"
@@ -56,6 +59,51 @@ const VictoryNativeArea = props => {
 const VictoryNativeAreaChart = props => {
   const dimensions = useWindowDimensions();
 
+  const data = useMemo(() => AreaDataJSON, []);
+
+  const keys = useMemo(
+    () => [
+      {
+        dataKey: 'Raoul',
+        fill: '#97e3d5',
+      },
+      {
+        dataKey: 'Josiane',
+        fill: '#61cdbb',
+      },
+      {
+        dataKey: 'Marcel',
+        fill: '#e8a838',
+      },
+      {
+        dataKey: 'René',
+        fill: '#f1e15b',
+      },
+      {
+        dataKey: 'Paul',
+        fill: '#f47560',
+      },
+      {
+        dataKey: 'Jacques',
+        fill: '#e8c1a0',
+      },
+    ],
+    [],
+  );
+
+  const stackData = useMemo(
+    () =>
+      keys.map(
+        ({ dataKey, fill }) => ({
+          id: dataKey,
+          color: fill,
+          data: data.map((datum, index) => ({ x: index, y: datum[dataKey] })),
+        }),
+        [],
+      ),
+    [data, keys],
+  );
+
   return (
     <View
       style={{
@@ -64,7 +112,7 @@ const VictoryNativeAreaChart = props => {
       }}>
       <VictoryNativeArea
         {...props}
-        stackData={AreaDataJSON}
+        stackData={stackData}
         width={dimensions.width}
       />
     </View>
