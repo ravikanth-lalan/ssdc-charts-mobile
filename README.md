@@ -33,7 +33,7 @@ NOTE: You need to have an Apple developer paid account to generate .ipa file
 `
 
 ```sh
-expo build:android
+expo build:ios
 ```
 
 ## Author
