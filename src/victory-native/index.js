@@ -7,6 +7,7 @@ import VictoryNativeColumnChart from './column-chart';
 import VictoryNativeDonutChart from './donut-chart';
 import VictoryNativeLineChart from './line-chart';
 import VictoryNativePieChart from './pie-chart';
+import VictoryNativeScatterChart from './scatter-plot-chart';
 
 const VictoryNativeCharts = () => {
   const [child, setChild] = useState(null);
@@ -20,6 +21,7 @@ const VictoryNativeCharts = () => {
         <VictoryNativeDonutChart />
         <VictoryNativeAreaChart />
         <VictoryNativeLineChart />
+        <VictoryNativeScatterChart />
       </ScrollView>,
     );
   }, []);
